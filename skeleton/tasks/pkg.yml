@@ -1,0 +1,41 @@
+---
+- name: Install required packages
+  pkgin:
+    name:
+      - bash
+      - bash-completion
+      - cdrtools
+      - coreutils
+      - curl
+      - diffutils
+      - gawk
+      - gh
+      - git
+      - gmake
+      - gnupg2
+      - gsed
+      - gtar
+      - jq
+      - mc
+      - nmap
+      - psmisc
+      - python311
+      - rsync
+      - screen
+      - vim
+      - wget
+    state: present
+  tags: ['pkg']
+
+#- name: Add pkgsrc collection
+#  git:
+#    repo: https://github.com/NetBSD/pkgsrc
+#    dest: /usr/pkgsrc
+#    depth: 1
+
+#- name: Add src
+#  git:
+#    repo: https://github.com/NetBSD/src
+#    dest: /usr/src
+#    version: netbsd-10
+#    depth: 1

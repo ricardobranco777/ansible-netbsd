@@ -1,0 +1,58 @@
+---
+# NOTE: We can't use Ansible's sysctl module
+# because NetBSD's sysctl lacks -p option
+- name: Security sysctls
+  lineinfile:
+    path: /etc/sysctl.conf
+    line: "{{ item.line }}"
+    regexp: "{{ item.regexp }}"
+  loop:
+    - line: net.inet.ip.random_id=1
+      regexp: ^net\.inet\.ip\.random_id=
+    - line: vfs.usermount=1
+      regexp: ^vfs\.usermount=
+  tags: ['security', 'sysctl']
+
+- name: Install security packages
+  pkgin:
+    name:
+      - doas
+      - sudo
+    state: present
+  tags: ['pkg', 'security']
+
+- name: Configure doas
+  copy:
+    src: doas.conf
+    dest: /usr/pkg/etc/doas.conf
+    owner: root
+    group: wheel
+    mode: 0600
+  tags: ['security']
+
+- name: Create sudo group
+  group:
+    name: sudo
+    system: true
+  tags: ['security']
+
+- name: Allow users in groups sudo & wheel to run sudo
+  copy:
+    src: sudoers.d/custom
+    dest: /usr/pkg/etc/sudoers.d/custom
+    owner: root
+    group: wheel
+    mode: 0600
+  tags: ['security']
+
+- name: Turn off suid/sgid bits
+  file:
+    path: "{{ item.path }}"
+    mode: "u-s,g-s"
+  ignore_errors: yes
+  loop:
+    - path: /usr/bin/lpq
+    - path: /usr/bin/lpr
+    - path: /usr/bin/lprm
+    - path: /usr/sbin/lpc
+  tags: ['security']

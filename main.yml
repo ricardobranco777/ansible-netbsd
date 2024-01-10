@@ -1,0 +1,6 @@
+---
+- name: Configure NetBSD
+  hosts: all
+
+  roles:
+    - role: skeleton

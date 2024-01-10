@@ -1,0 +1,21 @@
+---
+- name: Configure services
+  lineinfile:
+    path: /etc/rc.conf
+    line: "{{ item.line }}"
+  loop:
+    - line: clear_tmp=YES
+#    - line: devpubd=YES
+    - line: inetd=NO
+    - line: mdnsd=YES
+    - line: raidframe=NO
+    - line: ppp=NO
+    - line: xdm=NO
+
+- name: Set /root/.gitconfig
+  copy:
+    src: gitconfig
+    dest: /root/.gitconfig
+    owner: root
+    group: wheel
+    mode: 0644
