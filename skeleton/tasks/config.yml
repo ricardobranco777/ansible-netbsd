@@ -11,6 +11,18 @@
     - line: raidframe=NO
     - line: ppp=NO
     - line: xdm=NO
+  tags: ['config']
+
+- name: Mount / with soft-updates & noatime
+  mount:
+    path: /
+    src: /dev/dk0
+    fstype: ffs
+    state: present
+    opts: rw,noatime,log
+    passno: 1
+    dump: 1
+  tags: ['config', 'mount']
 
 - name: Set /root/.gitconfig
   copy:
@@ -19,3 +31,4 @@
     owner: root
     group: wheel
     mode: 0644
+  tags: ['config']
