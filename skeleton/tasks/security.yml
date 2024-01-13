@@ -9,8 +9,6 @@
   loop:
     - line: net.inet.ip.random_id=1
       regexp: ^net\.inet\.ip\.random_id=
-    - line: vfs.usermount=1
-      regexp: ^vfs\.usermount=
   tags: ['security', 'sysctl']
 
 - name: Install security packages
