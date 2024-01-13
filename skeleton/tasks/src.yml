@@ -21,3 +21,12 @@
     group: wheel
     mode: 0644
   tags: ['src']
+
+- name: Copy CUSTOM kernel configuration
+  copy:
+    src: CUSTOM
+    dest: /usr/src/sys/arch/amd64/conf/CUSTOM
+    owner: root
+    group: wheel
+    mode: 0644
+  tags: ['src']
