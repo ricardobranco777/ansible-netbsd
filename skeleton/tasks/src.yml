@@ -1,0 +1,23 @@
+---
+- name: Add src collection
+  shell: git clone --depth 1 --branch netbsd-10 https://github.com/NetBSD/src /usr/src
+  args:
+    creates: /usr/src
+  tags: ['src']
+
+#- name: Add src collection
+#  git:
+#    repo: https://github.com/NetBSD/src
+#    dest: /usr/src
+#    depth: 1
+#    version: netbsd-10
+#  tags: ['src']
+
+- name: Copy /etc/mk.conf
+  copy:
+    src: mk.conf
+    dest: /etc/mk.conf
+    owner: root
+    group: wheel
+    mode: 0644
+  tags: ['src']

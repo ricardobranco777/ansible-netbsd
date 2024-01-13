@@ -27,15 +27,15 @@
     state: present
   tags: ['pkg']
 
+- name: Add src collection
+  shell: git clone --depth 1 https://github.com/NetBSD/pkgsrc /usr/pkgsrc
+  args:
+    creates: /usr/pkgsrc
+  tags: ['pkgsrc']
+
 #- name: Add pkgsrc collection
 #  git:
 #    repo: https://github.com/NetBSD/pkgsrc
 #    dest: /usr/pkgsrc
 #    depth: 1
-
-#- name: Add src
-#  git:
-#    repo: https://github.com/NetBSD/src
-#    dest: /usr/src
-#    version: netbsd-10
-#    depth: 1
+#  tags: ['pkgsrc']
