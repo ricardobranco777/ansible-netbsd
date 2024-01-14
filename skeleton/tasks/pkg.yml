@@ -19,6 +19,7 @@
       - jq
       - mc
       - nmap
+      - patchutils
       - psmisc
       - python311
       - rsync
