@@ -23,12 +23,3 @@
     passno: 1
     dump: 1
   tags: ['config', 'mount']
-
-- name: Set /root/.gitconfig
-  copy:
-    src: gitconfig
-    dest: /root/.gitconfig
-    owner: root
-    group: wheel
-    mode: 0644
-  tags: ['config']
