@@ -2,7 +2,7 @@
 
 Ansible configuration for NetBSD 10
 
-Run:
+Run as root:
 
 ```
 PKG_PATH="https://cdn.NetBSD.org/pub/pkgsrc/packages/NetBSD/$(uname -p)/$(uname -r | cut -d_ -f1)/All"
@@ -12,6 +12,7 @@ pkgin update
 pkgin install python311
 echo PermitRootLogin prohibit-password >> /etc/ssh/sshd_config
 service sshd restart
+pkg_admin -K /usr/pkg/pkgdb fetch-pkg-vulnerabilities
 ```
 
 Check:
