@@ -13,6 +13,7 @@ pkgin install python311
 echo PermitRootLogin prohibit-password >> /etc/ssh/sshd_config
 service sshd restart
 pkg_admin -K /usr/pkg/pkgdb fetch-pkg-vulnerabilities
+pkg_admin audit
 ```
 
 Check:
