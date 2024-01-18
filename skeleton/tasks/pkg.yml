@@ -7,10 +7,11 @@
       - cdrtools
       - coreutils
       - curl
+      - cwrappers
       - findutils
       - diffutils
+      - digest
       - gawk
-      - gh
       - git-base
       - gmake
       - gnupg2
@@ -18,6 +19,7 @@
       - gtar
       - jq
       - mc
+      - mktools
       - nmap
       - patchutils
       - psmisc
