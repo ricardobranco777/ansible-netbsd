@@ -11,7 +11,7 @@
       - diffutils
       - gawk
       - gh
-      - git
+      - git-base
       - gmake
       - gnupg2
       - gsed
