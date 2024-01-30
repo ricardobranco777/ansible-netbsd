@@ -1,5 +1,5 @@
 ---
-- name: Create symbolic link
+- name: Create symbolic link for python
   file:
     src: "{{ ansible_facts.python.executable }}"
     dest: "{{ ansible_facts.python.executable | dirname }}/python"
