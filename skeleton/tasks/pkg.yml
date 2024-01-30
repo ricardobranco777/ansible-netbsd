@@ -20,7 +20,6 @@
       - jq
       - mc
       - mktools
-      - nmap
       - patchutils
       - psmisc
       - python311

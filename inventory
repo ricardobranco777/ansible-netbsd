@@ -1,1 +1,2 @@
 netbsd.local ansible_user=root
+netbsdx.local ansible_user=root
