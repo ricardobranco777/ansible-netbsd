@@ -13,13 +13,19 @@
     - line: xdm=NO
   tags: ['config']
 
+- name: Set fact for root mount device
+  set_fact:
+    root_mount_device: "{{ ansible_mounts | selectattr('mount', 'equalto', '/') | map(attribute='device') | first }}"
+  tags: ['config', 'mount']
+
 - name: Mount / with soft-updates & noatime
   mount:
     path: /
-    src: /dev/dk0
+    src: "{{ root_mount_device }}"
     fstype: ffs
     state: present
     opts: rw,noatime,log
     passno: 1
     dump: 1
+    backup: true
   tags: ['config', 'mount']
