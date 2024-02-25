@@ -4,22 +4,7 @@ include "arch/amd64/conf/GENERIC"
 
 options	EXT2FS_SYSTEM_FLAGS
 
-no options COMPAT_09
-no options COMPAT_10
-no options COMPAT_11
-no options COMPAT_12
-no options COMPAT_13
-no options COMPAT_14
 no options COMPAT_15
-no options COMPAT_16
-no options COMPAT_20
-no options COMPAT_30
-no options COMPAT_40
-no options COMPAT_50
-no options COMPAT_60
-no options COMPAT_70
-no options COMPAT_80
-no options COMPAT_90
 
 no options COMPAT_NETBSD32
 no options EXEC_ELF32
