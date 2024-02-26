@@ -21,6 +21,7 @@
       - mc
       - mktools
       - patchutils
+      - pkglint
       - psmisc
       - python311
       - rsync
