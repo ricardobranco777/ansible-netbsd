@@ -14,7 +14,7 @@ sudo cp /usr/obj/sys/arch/amd64/compile/CUSTOM/netbsd /
 sudo shutdown -r now
 
 cd /usr/src
-sudo ./build.sh -O ../obj -T ../tools -U install=/
+sudo ./build.sh -O ../obj -U install=/
 
 sudo /usr/sbin/postinstall -s /usr/src check
 sudo /usr/sbin/postinstall -s /usr/src fix
