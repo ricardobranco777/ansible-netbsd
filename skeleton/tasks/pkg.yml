@@ -27,6 +27,7 @@
       - python311
       - rsync
       - screen
+      - tmux
       - vim
       - wget
     state: present
