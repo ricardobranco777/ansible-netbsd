@@ -9,6 +9,10 @@
   loop:
     - line: net.inet.ip.random_id=1
       regexp: ^net\.inet\.ip\.random_id=
+    - line: security.models.extensions.hardlink_check_gid=1
+      regexp: ^security\.models\.extensions\.hardlink_check_gid=
+    - line: security.models.extensions.hardlink_check_uid=1
+      regexp: ^security\.models\.extensions\.hardlink_check_uid=
   tags: ['security', 'sysctl']
 
 - name: Install security packages
