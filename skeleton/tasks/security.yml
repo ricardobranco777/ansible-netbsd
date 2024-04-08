@@ -13,6 +13,8 @@
       regexp: ^security\.models\.extensions\.hardlink_check_gid=
     - line: security.models.extensions.hardlink_check_uid=1
       regexp: ^security\.models\.extensions\.hardlink_check_uid=
+    - line: security.curtain=1
+      regexp: ^security\.curtain=
   tags: ['security', 'sysctl']
 
 - name: Install security packages
