@@ -24,6 +24,7 @@
       - patchutils
       - pkglint
       - psmisc
+      - python3
       - python311
       - rsync
       - screen
