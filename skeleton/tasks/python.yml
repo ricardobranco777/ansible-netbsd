@@ -5,3 +5,10 @@
     dest: "{{ ansible_facts.python.executable | dirname }}/python"
     state: link
   ignore_errors: true
+
+- name: Create symbolic link for python3
+  file:
+    src: "{{ ansible_facts.python.executable }}"
+    dest: "{{ ansible_facts.python.executable | dirname }}/python3"
+    state: link
+  ignore_errors: true
