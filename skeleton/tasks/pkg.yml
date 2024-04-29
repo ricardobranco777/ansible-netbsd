@@ -26,6 +26,8 @@
       - psmisc
       - python3
       - python311
+      - py311-requests
+      - py311-setuptools
       - rsync
       - screen
       - tmux
