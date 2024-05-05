@@ -32,6 +32,7 @@
 - name: Install required packages
   pkgin:
     name:
+      - rpm2pkg
       - suse_base-15.5nb1
     state: present
   tags: ['pkg', 'linux']
