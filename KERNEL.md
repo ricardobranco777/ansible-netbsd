@@ -1,7 +1,7 @@
 
 ```
 # Make tools
-# ./build.sh -j8 -O ../obj -T ../tools -U -u tools
+# ./build.sh -j8 -O ../obj -U -u tools
 
 cd /usr/src/sys/arch/amd64/conf/
 config CUSTOM
