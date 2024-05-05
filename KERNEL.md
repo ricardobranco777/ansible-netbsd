@@ -1,7 +1,7 @@
 
 ```
 # Make tools
-# ./build.sh -j8 -O ../obj -U -u tools
+./build.sh -j8 -O ../obj -U -u tools
 
 cd /usr/src/sys/arch/amd64/conf/
 config CUSTOM
@@ -17,6 +17,6 @@ cd /usr/src
 sudo ./build.sh -O ../obj -U install=/
 
 sudo /usr/sbin/postinstall -s /usr/src check
-sudo /usr/sbin/postinstall -s /usr/src fix
+sudo /usr/sbin/postinstall -s /usr/src fix opensslcertsrehash
 sudo /usr/sbin/etcupdate -s /usr/src
 ```
