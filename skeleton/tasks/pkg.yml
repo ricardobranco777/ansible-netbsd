@@ -2,8 +2,11 @@
 - name: Install required packages
   pkgin:
     name:
+      - autoconf
+      - automake
       - bash
       - bash-completion
+      - bison
       - cdrtools
       - clang
       - coreutils
@@ -13,15 +16,18 @@
       - diffutils
       - digest
       - gawk
+      - gettext
       - git-base
       - gmake
       - gnupg2
       - gsed
       - gtar
       - jq
+      - libtool
       - mc
       - mktools
       - patchutils
+      - pkg-config
       - pkglint
       - psmisc
       - python3
