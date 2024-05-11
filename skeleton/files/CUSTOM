@@ -1,6 +1,6 @@
 # See options(4) for descriptions
 
-include "arch/amd64/conf/GENERIC"
+include "arch/amd64/conf/GENERIC_KASLR"
 
 options	EXT2FS_SYSTEM_FLAGS
 

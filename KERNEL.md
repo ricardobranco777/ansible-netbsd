@@ -9,7 +9,7 @@ cd /usr/src
 ./build.sh -j8 -O ../obj -U -u distribution
 ./build.sh -j8 -O ../obj -U -u kernel=CUSTOM
 
-sudo cp /netbsd /netbsd.old
+sudo cp -p /netbsd /netbsd.old
 sudo cp /usr/obj/sys/arch/amd64/compile/CUSTOM/netbsd /
 sudo shutdown -r now
 
