@@ -2,6 +2,7 @@
 - name: Install go packages
   pkgin:
     name:
+      - go120
       - go122
     state: present
   tags: ['pkg', 'golang']
