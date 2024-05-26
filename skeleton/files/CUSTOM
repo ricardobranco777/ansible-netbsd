@@ -8,6 +8,7 @@ no options COMPAT_15
 
 no options COMPAT_NETBSD32
 no options EXEC_ELF32
+no options MQUEUE
 
 no file-system CD9660
 no file-system CODA
