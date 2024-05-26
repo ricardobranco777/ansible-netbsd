@@ -8,7 +8,10 @@
 - name: Enable linux binary compatibility
   lineinfile:
     path: /etc/modules.conf
-    line: compat_linux
+    line: "{{ item.line }}"
+  loop:
+    - line: mqueue
+    - line: compat_linux
   tags: ['linux']
 
 - name: Mount /emul/linux/proc
