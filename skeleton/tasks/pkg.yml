@@ -35,6 +35,7 @@
       - python311
       - py311-requests
       - py311-setuptools
+      - rpm2pkg
       - rsync
       - screen
       - tmux
