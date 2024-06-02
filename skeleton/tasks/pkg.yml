@@ -29,6 +29,7 @@
       - moreutils
       - patchutils
       - pkg-config
+      - pkg_developer
       - pkglint
       - psmisc
       - python3
