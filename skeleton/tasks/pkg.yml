@@ -33,7 +33,6 @@
       - pkglint
       - psmisc
       - python3
-      - python311
       - py311-argon2-cffi
       - py311-passlib
       - py311-requests
