@@ -39,7 +39,6 @@
       - py311-setuptools
       - rsync
       - screen
-      - tmux
       - vim
       - wget
     state: present
