@@ -7,3 +7,5 @@
 - include_tasks: user.yml
 - include_tasks: golang.yml
 - include_tasks: linux.yml
+- include_tasks: firmware.yml
+  when: ansible_virtualization_type != 'kvm'

@@ -1,0 +1,23 @@
+---
+- name: Install firmware
+  pkgin:
+    name:
+      - intel-microcode-netbsd
+      - iwn-firmware
+    state: present
+  tags: ['pkg', 'firmware']
+
+- name: Create symlink for intel microcode
+  file:
+    src: /usr/pkg/share/examples/rc.d/intel-microcode
+    dest: /etc/rc.d/intel-microcode
+    state: link
+  tags: ['firmare', 'intel']
+
+- name: Configure /etc/rc.conf for firmware
+  lineinfile:
+    path: /etc/rc.conf
+    line: "{{ item.line }}"
+  loop:
+    - line: microcode=YES
+  tags: ['firmware']
