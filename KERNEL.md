@@ -1,9 +1,7 @@
 
 ```
-# Make tools
-./build.sh -j8 -O ../obj -U -u tools
-
 cd /usr/src
+./build.sh -j8 -O ../obj -U -u tools
 ./build.sh -j8 -O ../obj -U -u distribution
 ./build.sh -j8 -O ../obj -U -u kernel=CUSTOM
 
