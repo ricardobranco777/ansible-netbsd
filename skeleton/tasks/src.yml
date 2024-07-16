@@ -13,6 +13,15 @@
 #    version: netbsd-10
 #  tags: ['src']
 
+- name: Copy /etc/etcupdate.conf
+  copy:
+    src: etcupdate.conf
+    dest: /etc/etcupdate.conf
+    owner: root
+    group: wheel
+    mode: 0644
+  tags: ['src']
+
 - name: Copy /etc/mk.conf
   copy:
     src: mk.conf
