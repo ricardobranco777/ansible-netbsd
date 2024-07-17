@@ -29,6 +29,7 @@
       - mktools
       - moreutils
       - patchutils
+      - pigz
       - pkg-config
       - pkg_developer
       - pkglint
