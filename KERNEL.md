@@ -8,7 +8,7 @@ cd /usr/src
 # Optional: Make snapshot
 sudo fssconfig -c fss0 / /backup
 
-sudo cp -p /netbsd /netbsd.old
+sudo cp /netbsd /netbsd.old
 sudo cp /usr/obj/sys/arch/$(uname -m)/compile/CUSTOM/netbsd /
 sudo shutdown -r now
 
