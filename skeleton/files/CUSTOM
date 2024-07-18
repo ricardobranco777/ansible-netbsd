@@ -1,6 +1,7 @@
 # See options(4) for descriptions
 
 include "arch/amd64/conf/GENERIC"
+ident "CUSTOM"
 
 options	EXT2FS_SYSTEM_FLAGS
 
