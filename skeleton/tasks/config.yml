@@ -5,13 +5,23 @@
     line: "{{ item.line }}"
   loop:
     - line: clear_tmp=YES
-#    - line: devpubd=YES
+    - line: '#devpubd=YES'
+    - line: dhcpcd=YES
+    - line: '#dhcpcd_flags="-qM ure0"'
     - line: inetd=NO
     - line: mdnsd=YES
-    - line: raidframe=NO
+    - line: ntpd=YES
     - line: ppp=NO
+    - line: raidframe=NO
     - line: xdm=NO
   tags: ['config']
+
+- name: Ensure the 'hosts' line is set correctly in /etc/nsswitch.conf
+  lineinfile:
+    path: /etc/nsswitch.conf
+    regexp: '^hosts:'
+    line: "hosts:\t\tfiles multicast_dns dns"
+    state: present
 
 - name: Set fact for root mount device
   set_fact:
