@@ -22,6 +22,5 @@ Check:
 Run with:
 `ansible-playbook -v -i inventory main.yml`
 
-TODO:
-- Configure /etc/nsswitch.conf for multicast_dns
-- NPF
+To remount `/` read-write in single user mode:
+`mount -u /`
