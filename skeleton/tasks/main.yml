@@ -4,6 +4,7 @@
 - include_tasks: config.yml
 - include_tasks: src.yml
 - include_tasks: security.yml
+- include_tasks: npf.yml
 - include_tasks: user.yml
 - include_tasks: golang.yml
 - include_tasks: linux.yml

@@ -1,0 +1,17 @@
+---
+- name: Enable NPF
+  lineinfile:
+    path: /etc/rc.conf
+    line: "{{ item.line }}"
+  loop:
+    - line: npf=YES
+  tags: ['npf']
+
+- name: Add npf.conf
+  copy:
+    src: npf.conf
+    dest: /etc/npf.conf
+    owner: root
+    group: wheel
+    mode: 0600
+  tags: ['npf']
