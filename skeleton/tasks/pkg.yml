@@ -35,10 +35,10 @@
       - pkglint
       - psmisc
       - python3
-      - py311-argon2-cffi
-      - py311-passlib
-      - py311-requests
-      - py311-setuptools
+      - py312-argon2-cffi
+      - py312-passlib
+      - py312-requests
+      - py312-setuptools
       - rsync
       - screen
       - vim
