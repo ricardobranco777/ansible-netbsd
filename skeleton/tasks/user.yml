@@ -2,7 +2,7 @@
 - name: Add user to needed groups
   user:
     name: ricardo
-    groups: wheel,sudo,operator,wsrc
+    groups: wheel,operator,wsrc
     append: yes
     shell: /usr/pkg/bin/bash
   tags: ['user']
