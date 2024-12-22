@@ -1,9 +1,9 @@
 ---
-- name: Add src collection
-  shell: git clone --depth 1 --branch netbsd-10 https://github.com/NetBSD/src /usr/src
-  args:
-    creates: /usr/src
-  tags: ['src']
+#- name: Add src collection
+#  shell: git clone --depth 1 --branch netbsd-10 https://github.com/NetBSD/src /usr/src
+#  args:
+#    creates: /usr/src
+#  tags: ['src']
 
 #- name: Add src collection
 #  git:
@@ -31,11 +31,11 @@
     mode: 0644
   tags: ['src']
 
-- name: Copy CUSTOM kernel configuration
-  copy:
-    src: CUSTOM
-    dest: /usr/src/sys/arch/amd64/conf/CUSTOM
-    owner: root
-    group: wheel
-    mode: 0644
-  tags: ['src']
+#- name: Copy CUSTOM kernel configuration
+#  copy:
+#    src: CUSTOM
+#    dest: /usr/src/sys/arch/amd64/conf/CUSTOM
+#    owner: root
+#    group: wheel
+#    mode: 0644
+#  tags: ['src']

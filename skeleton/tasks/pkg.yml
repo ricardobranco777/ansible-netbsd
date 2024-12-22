@@ -34,7 +34,7 @@
       - pkg_developer
       - pkglint
       - psmisc
-      - python3
+      - python312
       - py312-argon2-cffi
       - py312-passlib
       - py312-requests
@@ -46,11 +46,11 @@
     state: present
   tags: ['pkg']
 
-- name: Add src collection
-  shell: git clone --depth 1 https://github.com/NetBSD/pkgsrc /usr/pkgsrc
-  args:
-    creates: /usr/pkgsrc
-  tags: ['pkgsrc']
+#- name: Add pkgsrc collection
+#  shell: git clone --depth 1 https://github.com/NetBSD/pkgsrc /usr/pkgsrc
+#  args:
+#    creates: /usr/pkgsrc
+#  tags: ['pkgsrc']
 
 #- name: Add pkgsrc collection
 #  git:
