@@ -6,14 +6,10 @@
   loop:
     - line: clear_tmp=YES
     - line: '#devpubd=YES'
-    - line: dhcpcd=YES
-    - line: '#dhcpcd_flags="-qM ure0"'
     - line: inetd=NO
     - line: mdnsd=YES
     - line: ntpd=YES
-    - line: ppp=NO
-    - line: raidframe=NO
-    - line: xdm=NO
+    - line: ntpdate=YES
   tags: ['config']
 
 - name: Ensure the 'hosts' line is set correctly in /etc/nsswitch.conf
