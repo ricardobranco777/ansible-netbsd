@@ -17,10 +17,10 @@ pkg_admin audit
 ```
 
 Check:
-`ansible-playbook -v -C -i inventory main.yml`
+`ansible-playbook -v -C -i inventory.yml main.yml`
 
 Run with:
-`ansible-playbook -v -i inventory main.yml`
+`ansible-playbook -v -i inventory.yml main.yml`
 
 To remount `/` read-write in single user mode:
 `mount -u /`
