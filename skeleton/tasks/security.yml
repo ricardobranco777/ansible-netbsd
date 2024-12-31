@@ -15,7 +15,6 @@
       regexp: ^security\.models\.extensions\.hardlink_check_uid=
     - line: security.curtain=1
       regexp: ^security\.curtain=
-  tags: ['security', 'sysctl']
 
 - name: Install security packages
   pkgin:
@@ -23,7 +22,6 @@
       - doas
       - sudo
     state: present
-  tags: ['pkg', 'security']
 
 - name: Configure doas
   copy:
@@ -32,7 +30,6 @@
     owner: root
     group: wheel
     mode: 0600
-  tags: ['security']
 
 - name: Configure sudo
   copy:
@@ -41,7 +38,6 @@
     owner: root
     group: wheel
     mode: 0600
-  tags: ['security']
 
 - name: Turn off suid/sgid bits
   file:
@@ -53,4 +49,3 @@
     - path: /usr/bin/lpr
     - path: /usr/bin/lprm
     - path: /usr/sbin/lpc
-  tags: ['security']

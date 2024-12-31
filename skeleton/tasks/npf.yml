@@ -5,7 +5,6 @@
     line: "{{ item.line }}"
   loop:
     - line: npf=YES
-  tags: ['npf']
 
 - name: Add npf.conf
   copy:
@@ -14,4 +13,3 @@
     owner: root
     group: wheel
     mode: 0600
-  tags: ['npf']

@@ -5,7 +5,6 @@
     groups: wheel,operator,wsrc
     append: yes
     shell: /usr/pkg/bin/bash
-  tags: ['user']
 
 - name: Fix HOME permissions
   file:
@@ -14,4 +13,3 @@
     owner: "{{ target_user }}"
     group: users
     mode: '0750'
-  tags: ['user']

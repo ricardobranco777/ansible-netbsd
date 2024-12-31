@@ -6,7 +6,6 @@
     owner: root
     group: wheel
     mode: 0600
-  tags: ['wifi']
 
 - name: Configure WiFi
   lineinfile:
@@ -16,4 +15,3 @@
     - line: dhcpcd_flags="-qM iwm0"
     - line: wpa_supplicant=YES
     - line: wpa_supplicant_flags="-B -s -i iwm0 -D bsd -c /etc/wpa_supplicant.conf"
-  tags: ['wifi']

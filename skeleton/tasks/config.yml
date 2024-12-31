@@ -10,7 +10,6 @@
     - line: mdnsd=YES
     - line: ntpd=YES
     - line: ntpdate=YES
-  tags: ['config']
 
 - name: Ensure the 'hosts' line is set correctly in /etc/nsswitch.conf
   lineinfile:
@@ -22,7 +21,6 @@
 - name: Set fact for root mount device
   set_fact:
     root_mount_device: "{{ ansible_mounts | selectattr('mount', 'equalto', '/') | map(attribute='device') | first }}"
-  tags: ['config', 'mount']
 
 - name: Mount / with soft-updates & noatime
   mount:
@@ -34,4 +32,3 @@
     passno: 1
     dump: 1
     backup: true
-  tags: ['config', 'mount']

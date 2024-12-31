@@ -3,7 +3,6 @@
   shell: touch /etc/modules.conf
   args:
     creates: /etc/modules.conf
-  tags: ['linux']
 
 - name: Enable linux binary compatibility
   lineinfile:
@@ -12,7 +11,6 @@
   loop:
     - line: mqueue
     - line: compat_linux
-  tags: ['linux']
 
 - name: Mount /emul/linux/proc
   mount:
@@ -21,7 +19,6 @@
     fstype: procfs
     state: mounted
     opts: ro
-  tags: ['linux', 'mount']
 
 - name: Mount /emul/linux/dev/shm
   mount:
@@ -30,7 +27,6 @@
     fstype: tmpfs
     state: mounted
     opts: rw,-m1777
-  tags: ['linux', 'mount']
 
 - name: Install required packages
   pkgin:
@@ -39,4 +35,3 @@
       - suse_base-15.5nb1
       - suse_binutils-15.5
     state: present
-  tags: ['pkg', 'linux']
