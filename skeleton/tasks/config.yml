@@ -5,7 +5,7 @@
     line: "{{ item.line }}"
   loop:
     - line: clear_tmp=YES
-    - line: '#devpubd=YES'
+    - line: devpubd=YES
     - line: inetd=NO
     - line: mdnsd=YES
     - line: ntpd=YES
