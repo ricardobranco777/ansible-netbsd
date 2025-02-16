@@ -1,9 +1,10 @@
 
 ```
 cd /usr/src
-./build.sh -j8 -O ../obj -U -u tools
-./build.sh -j8 -O ../obj -U -u distribution
-./build.sh -j8 -O ../obj -U -u kernel=CUSTOM
+ncpu=$(sysctl -n hw.ncpu)
+./build.sh -j$ncpu -O ../obj -U -u tools
+./build.sh -j$ncpu -O ../obj -U -u distribution
+./build.sh -j$ncpu -O ../obj -U -u kernel=CUSTOM
 
 sudo cp /netbsd /netbsd.old
 sudo cp /usr/obj/sys/arch/$(uname -m)/compile/CUSTOM/netbsd /
