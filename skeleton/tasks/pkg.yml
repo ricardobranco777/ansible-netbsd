@@ -10,6 +10,7 @@
 - name: Install required packages
   pkgin:
     name:
+      - atf
       - autoconf
       - automake
       - bash
