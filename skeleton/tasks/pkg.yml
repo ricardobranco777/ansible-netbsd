@@ -49,7 +49,6 @@
       - py312-requests
       - py312-setuptools
       - rsync
-      - screen
       - vim
       - wget
     state: present
