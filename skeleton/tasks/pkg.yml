@@ -30,6 +30,7 @@
       - git-base
       - gmake
       - gnupg2
+      - gperf
       - gsed
       - gtar
       - jq
