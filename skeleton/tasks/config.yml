@@ -9,7 +9,7 @@
     - line: inetd=NO
     - line: mdnsd=YES
     - line: ntpd=YES
-    - line: ntpdate=YES
+    - line: #ntpdate=YES
 
 - name: Ensure the 'hosts' line is set correctly in /etc/nsswitch.conf
   lineinfile:
