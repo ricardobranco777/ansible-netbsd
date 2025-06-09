@@ -44,11 +44,11 @@
       - pkg_developer
       - pkglint
       - psmisc
-      - python312
-      - py312-argon2-cffi
-      - py312-passlib
-      - py312-requests
-      - py312-setuptools
+      - python313
+      - py313-argon2-cffi
+      - py313-passlib
+      - py313-requests
+      - py313-setuptools
       - rsync
       - vim
       - wget
