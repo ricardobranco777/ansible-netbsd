@@ -30,7 +30,6 @@
       - gsed
       - gtar
       - jq
-      - libtool
       - mc
       - mktools
       - moreutils
