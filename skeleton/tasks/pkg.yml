@@ -45,6 +45,7 @@
       - py313-requests
       - py313-setuptools
       - rsync
+      - sysupgrade
       - vim
       - wget
     state: present

@@ -24,3 +24,6 @@ Run with:
 
 To remount `/` read-write in single user mode:
 `mount -u /`
+
+To update:
+`sysupgrade auto`
