@@ -27,3 +27,8 @@ To remount `/` read-write in single user mode:
 
 To update:
 `sysupgrade auto`
+
+To install more sets:
+Download them from https://nycdn.netbsd.org/pub/NetBSD-daily/netbsd-11/latest/amd64/binary/sets/
+and copy them to /var/cache/sysupgrade and then run the above command.
+This is better than just decompressing the tarballs as it respects the mtree directives.
