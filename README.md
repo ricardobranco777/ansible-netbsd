@@ -28,6 +28,7 @@ To remount `/` read-write in single user mode:
 To update:
 
 ```
+sysupgrade clean
 sysupgrade fetch
 sysupgrade auto
 ```
