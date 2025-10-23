@@ -26,7 +26,11 @@ To remount `/` read-write in single user mode:
 `mount -u /`
 
 To update:
-`sysupgrade auto`
+
+```
+sysupgrade fetch
+sysupgrade auto
+```
 
 To install more sets:
 Download them from https://nycdn.netbsd.org/pub/NetBSD-daily/netbsd-11/latest/amd64/binary/sets/
