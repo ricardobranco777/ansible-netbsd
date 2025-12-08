@@ -7,9 +7,9 @@
     - line: clear_tmp=YES
     - line: devpubd=YES
     - line: inetd=NO
-    - line: mdnsd=YES
+    - line: mdnsd=NO
     - line: ntpd=YES
-    - line: #ntpdate=YES
+    - line: postfix=NO
 
 - name: Ensure the 'hosts' line is set correctly in /etc/nsswitch.conf
   lineinfile:
