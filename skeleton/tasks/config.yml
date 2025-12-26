@@ -2,14 +2,14 @@
 - name: Configure services
   lineinfile:
     path: /etc/rc.conf
-    line: "{{ item.line }}"
+    line: "{{ item }}"
   loop:
-    - line: clear_tmp=YES
-    - line: devpubd=YES
-    - line: inetd=NO
-    - line: mdnsd=NO
-    - line: ntpd=YES
-    - line: postfix=NO
+    - clear_tmp=YES
+    - devpubd=YES
+    - inetd=NO
+    - mdnsd=NO
+    - ntpd=YES
+    - postfix=NO
 
 - name: Ensure the 'hosts' line is set correctly in /etc/nsswitch.conf
   lineinfile:

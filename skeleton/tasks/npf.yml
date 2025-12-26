@@ -2,9 +2,9 @@
 - name: Enable NPF
   lineinfile:
     path: /etc/rc.conf
-    line: "{{ item.line }}"
+    line: "{{ item }}"
   loop:
-    - line: npf=YES
+    - npf=YES
 
 - name: Add npf.conf
   copy:

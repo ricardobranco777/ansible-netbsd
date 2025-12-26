@@ -20,7 +20,7 @@
   pkgin:
     name:
       - doas
-      #- sudo
+      - sudo
     state: present
 
 - name: Configure doas
@@ -41,11 +41,11 @@
 
 - name: Turn off suid/sgid bits
   file:
-    path: "{{ item.path }}"
+    path: "{{ item }}"
     mode: "u-s,g-s"
   ignore_errors: yes
   loop:
-    - path: /usr/bin/lpq
-    - path: /usr/bin/lpr
-    - path: /usr/bin/lprm
-    - path: /usr/sbin/lpc
+    - /usr/bin/lpq
+    - /usr/bin/lpr
+    - /usr/bin/lprm
+    - /usr/sbin/lpc

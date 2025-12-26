@@ -15,6 +15,6 @@
 - name: Configure /etc/rc.conf for firmware
   lineinfile:
     path: /etc/rc.conf
-    line: "{{ item.line }}"
+    line: "{{ item }}"
   loop:
-    - line: microcode=YES
+    - microcode=YES

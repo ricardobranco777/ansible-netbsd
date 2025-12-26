@@ -7,10 +7,11 @@
 - name: Enable linux binary compatibility
   lineinfile:
     path: /etc/modules.conf
-    line: "{{ item.line }}"
+    line: "{{ item }}"
+    create: true
   loop:
-    - line: mqueue
-    - line: compat_linux
+    - compat_linux
+    - mqueue
 
 - name: Mount /emul/linux/proc
   mount:
@@ -28,10 +29,10 @@
     state: mounted
     opts: rw,-m1777
 
-- name: Install required packages
-  pkgin:
-    name:
-      - rpm2pkg
-      - suse_base-15.5nb1
-      - suse_binutils-15.5
-    state: present
+#- name: Install required packages
+#  pkgin:
+#    name:
+#      - rpm2pkg
+#      - suse_base-15.5nb1
+#      - suse_binutils-15.5
+#    state: present

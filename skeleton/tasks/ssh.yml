@@ -32,6 +32,6 @@
 - name: Configure services
   lineinfile:
     path: /etc/rc.conf
-    line: "{{ item.line }}"
+    line: "{{ item }}"
   loop:
-    - line: sshd=YES
+    - sshd=YES
