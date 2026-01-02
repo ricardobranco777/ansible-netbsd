@@ -49,3 +49,11 @@
     - /usr/bin/lpr
     - /usr/bin/lprm
     - /usr/sbin/lpc
+
+# You can't run X11 with legacy (e.g. VESA) drivers above securelevel 0
+- name: Set securelevel
+  lineinfile:
+    path: /etc/rc.conf
+    line: "{{ item }}"
+  loop:
+    - securelevel=1
