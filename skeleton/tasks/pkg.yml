@@ -47,7 +47,7 @@
       - rsync
       - sysupgrade
       - vim
-      - wget
+      - wget2
     state: present
 
 #- name: Add pkgsrc collection
